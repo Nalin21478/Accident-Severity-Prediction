@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accident Severity Prediction</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            color: #555;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Accident Severity Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="distance">Distance (mi):</label>
+        <input type="text" name="Distance(mi)" required>
+
+        <label for="temperature">Temperature (F):</label>
+        <input type="text" name="Temperature(F)" required>
+
+        <label for="wind_chill">Wind Chill (F):</label>
+        <input type="text" name="Wind_Chill(F)">
+
+        <label for="humidity">Humidity (%):</label>
+        <input type="text" name="Humidity(%)">
+
+        <label for="pressure">Pressure (in):</label>
+        <input type="text" name="Pressure(in)" required>
+
+        <label for="visibility">Visibility (mi):</label>
+        <input type="text" name="Visibility(mi)" required>
+
+        <label for="wind_direction">Wind Direction:</label>
+        <select name="Wind_Direction" required>
+            <option value="CALM">CALM</option>
+            <option value="W">W</option>
+            <option value="N">N</option>
+            <option value="S">S</option>
+            <option value="E">E</option>
+            <option value="VAR">VAR</option>
+        </select>
+
+        <label for="wind_speed">Wind Speed (mph):</label>
+        <input type="text" name="Wind_Speed(mph)" required>
+
+        <label for="precipitation">Precipitation (in):</label>
+        <input type="text" name="Precipitation(in)" required>
+
+        <label for="weather_condition">Weather Condition:</label>
+        <select name="Weather_Condition" required>
+            <option value="Clear">Clear</option>
+            <option value="Cloud">Cloud</option>
+            <option value="Fog">Fog</option>
+            <option value="Rain">Rain</option>
+            <option value="Windy">Windy</option>
+            <option value="Heavy Rain">Heavy Rain</option>
+            <option value="Others">Others</option>
+            <option value="Snow">Snow</option>
+            <option value="Heavy Snow">Heavy Snow</option>
+        </select>
+
+        <label for="crossing">Crossing:</label>
+        <select name="Crossing" required>
+            <option value="False">False</option>
+            <option value="True">True</option>
+        </select>
+
+        <label for="junction">Junction:</label>
+        <select name="Junction" required>
+            <option value="False">False</option>
+            <option value="True">True</option>
+        </select>
+
+        <label for="traffic_signal">Traffic Signal:</label>
+        <select name="Traffic_Signal" required>
+            <option value="False">False</option>
+            <option value="True">True</option>
+        </select>
+
+        <label for="sunrise_sunset">Sunrise Sunset:</label>
+        <select name="Sunrise_Sunset" required>
+            <option value="Day">Day</option>
+            <option value="Night">Night</option>
+        </select>
+
+        <label for="day_type">Day Type:</label>
+        <select name="Day_Type" required>
+            <option value="Weekday">Weekday</option>
+            <option value="Weekend">Weekend</option>
+        </select>
+
+        <label for="season">Season:</label>
+        <select name="Season" required>
+            <option value="Summer">Summer</option>
+            <option value="Spring">Spring</option>
+            <option value="Autumn">Autumn</option>
+            <option value="Winter">Winter</option>
+        </select>
+
+        <label for="time_of_day">Time Of Day:</label>
+        <select name="Time_Of_Day" required>
+            <option value="Evening">Evening</option>
+            <option value="Afternoon">Afternoon</option>
+            <option value="Morning">Morning</option>
+            <option value="Night">Night</option>
+        </select>
+
+        <label for="duration">Duration:</label>
+        <input type="text" name="Duration" required>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>

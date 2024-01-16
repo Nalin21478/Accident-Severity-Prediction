@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accident Severity Prediction</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        a.button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            text-decoration: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        a.button:hover {
+            background-color: #45a049;
+        }
+
+        img {
+            max-width: 80%; /* Adjust the percentage to your liking */
+            height: auto;
+            margin-top: 30px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Accident Severity Prediction</h1>
+    <a href="/predict" class="button">Predict Now</a>
+    <p>Accurate accident prediction is crucial for enhancing safety on the roads. Our prediction model uses advanced algorithms to analyze various factors and estimate accident severity.</p>
+    <img src="{{ url_for('static', filename='a.png') }}" alt="Accident Prediction Photo">
+</body>
+</html>
